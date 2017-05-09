@@ -90,7 +90,7 @@ Once everything is up you can check cluster status by running:
 
 ```
 FIRST_POD=$(kubectl get pods -n $namespace -l 'app=rabbitmq' -o jsonpath='{.items[0].metadata.name }')
-kubectl -n default exec -ti $FIRST_POD rabbitmqctl cluster_status
+kubectl -n $namespace exec -ti $FIRST_POD rabbitmqctl cluster_status
 ```
 
 This should return something like this showing at least N (where N = # of replicas in your Deployment YAML file) nodes joined cluster:
