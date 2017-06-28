@@ -61,7 +61,7 @@ The output file will be placed in plugins/autocluster.ez and is ready to be used
 
 ## Launching Installation
 
-When image is already built and pushed to the registry and plugin is inside and activated, you're ready to launch your installation in Kubernetes. Currently, our image is built from [this source](https://git.arilot.com/containers/rabbitmq-cluster/) with Gitlab-Runner and all YAML files needed to run the installation are [here](https://git.arilot.com/arilot/kubernetes/tree/master/rabbitmq-autocluster) .
+When image is already built and pushed to the registry and plugin is inside and activated, you're ready to launch your installation in Kubernetes. Currently, our image is built from [this source](https://github.com/aweber/rabbitmq-autocluster/tree/master/src) with Gitlab-Runner and all YAML files needed to run the installation are [here](https://github.com/kuberstack/kubernetes-rabbitmq-autocluster/tree/master/manifestos).
 
 So, we don't have to do anything with the image, it is already in the registry, we only need YAML files to run from.
 
