@@ -1,4 +1,4 @@
-FROM rabbitmq:3.6.8
+FROM rabbitmq:latest
 
 ENV RABBITMQ_USE_LONGNAME=true \
     AUTOCLUSTER_LOG_LEVEL=debug \
@@ -8,6 +8,5 @@ ENV RABBITMQ_USE_LONGNAME=true \
     AUTOCLUSTER_TYPE=k8s \
     LANG=en_US.UTF-8
 
-ADD plugins/*.ez /usr/lib/rabbitmq/lib/rabbitmq_server-3.6.8/plugins/
-
+ADD plugins/*.ez /usr/lib/rabbitmq/lib/rabbitmq_server-*/plugins/
 RUN rabbitmq-plugins enable --offline autocluster
